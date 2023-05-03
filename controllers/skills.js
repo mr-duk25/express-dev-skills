@@ -1,5 +1,7 @@
 // controllers/todos.js
 
+
+// we call variables that hold/reference models singular and in uppercase
 const Skill = require('../models/skill')
 
 
