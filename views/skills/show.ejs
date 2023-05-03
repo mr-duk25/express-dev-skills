@@ -8,16 +8,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <a href="/">Home</a>
-    <h1>All Skills</h1>
-    <ul>
-      <% skills.forEach(function(s) { %>
-        <li>
-          <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-            - 
-          <%= s.learned ? 'Learned' : 'Not Learned' %>
-        </li>
-      <% }); %>
-    </ul>
+    <a href="/">Home</a>
+    <a href="/skills">All Skills</a>
+    <h3><%= skill.skill %></h3>
+    <h3>Complete: <%= skill.learned ? 'Yes' : 'No' %></h3>
   </body>
 </html>
