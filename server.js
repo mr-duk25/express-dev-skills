@@ -19,10 +19,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.set('view engine', 'ejs');
+	
+// add middleware below the above line of code
+app.use(function(req, res, next) {
+  console.log('Hello SEI!');
+  next();  // Pass the request to the next middleware
+});
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
