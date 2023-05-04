@@ -13,11 +13,16 @@ router.get('/new', skillsCtrl.new);
 //GET /skills:id
 router.get('/:id', skillsCtrl.show);
 
+// GET	/posts/:id/edit
+router.get('/:id/edit', skillsCtrl.edit);
+
+
 // POST	/posts
 router.post('/', skillsCtrl.create);
 
 // DELETE	/skills/:id
 router.delete('/:id', skillsCtrl.delete);
+
 
 
 
